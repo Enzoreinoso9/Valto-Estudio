@@ -1,0 +1,152 @@
+.inicio {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1920');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.inicio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.inicio-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.inicio-left {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s ease 0.3s forwards;
+}
+
+.inicio-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.inicio-subtitle {
+  font-size: 1.25rem;
+  color: #e0e0e0;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+}
+
+.inicio-button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.inicio-button:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.inicio-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease 0.5s forwards;
+}
+
+.inicio-logo-large {
+  text-align: center;
+}
+
+.inicio-logo-large h2 {
+  font-size: 6rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 8px;
+  opacity: 0.9;
+}
+
+.inicio-logo-large p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin: 0.5rem 0 0 0;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 968px) {
+  .inicio-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .inicio-title {
+    font-size: 2.5rem;
+  }
+
+  .inicio-logo-large h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .inicio-title {
+    font-size: 2rem;
+  }
+
+  .inicio-subtitle {
+    font-size: 1rem;
+  }
+
+  .inicio-logo-large h2 {
+    font-size: 3rem;
+  }
+}
+
