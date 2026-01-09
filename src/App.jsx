@@ -1,23 +1,20 @@
-import Navbar from './components/Navbar';
-import Inicio from './components/Inicio';
-import Nosotros from './components/Nosotros';
-import Proyectos from './components/Proyectos';
-import Integrantes from './components/Integrantes';
-import Contacto from './components/Contacto';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
+import Home from './pages/Home';
+import ProyectosFinalizados from './pages/ProyectosFinalizados';
+import ProyectosEnEjecucion from './pages/ProyectosEnEjecucion';
 import './App.css';
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Inicio />
-      <Nosotros />
-      <Proyectos />
-      <Integrantes />
-      <Contacto />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/proyectos-finalizados" element={<ProyectosFinalizados />} />
+        <Route path="/proyectos-en-ejecucion" element={<ProyectosEnEjecucion />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

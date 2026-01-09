@@ -8,8 +8,8 @@ const Integrantes = () => {
   const integrantes = [
     {
       id: 1,
-      nombre: 'Juan Pérez',
-      nombreCompleto: 'Juan Pérez',
+      nombre: 'Nicolas Echeverria',
+      nombreCompleto: 'Nicolas Echeverria',
       rol: 'Arquitecto Principal',
       foto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
       biografia:
@@ -19,36 +19,14 @@ const Integrantes = () => {
     },
     {
       id: 2,
-      nombre: 'María González',
-      nombreCompleto: 'María González',
+      nombre: 'Sebastian Cardozo',
+      nombreCompleto: 'Sebastian Cardozo',
       rol: 'Directora de Proyectos',
       foto: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400',
       biografia:
         'Arquitecta especializada en gestión de proyectos y diseño de interiores. Con amplia experiencia en proyectos residenciales y comerciales de gran escala.',
       formacion: 'Arquitecta - Universidad de Buenos Aires',
       infoAdicional: 'Certificada en BIM y diseño sostenible',
-    },
-    {
-      id: 3,
-      nombre: 'Carlos Rodríguez',
-      nombreCompleto: 'Carlos Rodríguez',
-      rol: 'Arquitecto Senior',
-      foto: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400',
-      biografia:
-        'Arquitecto con enfoque en arquitectura moderna y tecnología aplicada. Experto en visualización arquitectónica y renderizado 3D.',
-      formacion: 'Arquitecto - Universidad Tecnológica',
-      infoAdicional: 'Especialista en diseño paramétrico',
-    },
-    {
-      id: 4,
-      nombre: 'Ana Martínez',
-      nombreCompleto: 'Ana Martínez',
-      rol: 'Diseñadora de Interiores',
-      foto: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400',
-      biografia:
-        'Diseñadora de interiores con pasión por crear espacios funcionales y estéticamente atractivos. Especializada en diseño residencial y comercial.',
-      formacion: 'Diseñadora de Interiores - Instituto de Diseño',
-      infoAdicional: 'Certificada en diseño de espacios sostenibles',
     },
   ];
 

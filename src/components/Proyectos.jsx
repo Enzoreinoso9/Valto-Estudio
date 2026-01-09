@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Proyectos.css';
 
 const Proyectos = () => {
@@ -21,7 +22,7 @@ const Proyectos = () => {
     {
       id: 3,
       nombre: 'Centro Comercial',
-      imagen: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800',
+      imagen: 'https://www.arquimaster.com.ar/web/wp-content/uploads/2013/12/cc_alrio2.jpg',
       categoria: 'En Ejecución',
     },
     {
@@ -69,6 +70,22 @@ const Proyectos = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="proyectos-navigation">
+          <Link to="/proyectos-finalizados" className="proyectos-nav-button proyectos-nav-button-finalizados">
+            <span className="proyectos-nav-icon">✓</span>
+            <div className="proyectos-nav-content">
+              <h3>Proyectos Finalizados</h3>
+              <p>Ver todas las obras completadas</p>
+            </div>
+          </Link>
+          <Link to="/proyectos-en-ejecucion" className="proyectos-nav-button proyectos-nav-button-ejecucion">
+            <span className="proyectos-nav-icon">⚡</span>
+            <div className="proyectos-nav-content">
+              <h3>En Ejecución</h3>
+              <p>Ver proyectos en desarrollo</p>
+            </div>
+          </Link>
         </div>
       </div>
     </section>

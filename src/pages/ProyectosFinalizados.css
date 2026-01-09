@@ -1,0 +1,227 @@
+.proyectos-finalizados-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 500px;
+  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.proyectos-finalizados-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.proyectos-finalizados-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 2rem;
+  max-width: 900px;
+}
+
+.proyectos-finalizados-hero-content .proyectos-finalizados-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 1.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.proyectos-finalizados-hero-content .proyectos-finalizados-subtitle {
+  font-size: 1.3rem;
+  color: #fff;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.proyectos-finalizados-page {
+  padding: 4rem 0 6rem;
+  background: #fff;
+  min-height: calc(100vh - 200px);
+}
+
+.proyectos-finalizados-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.proyectos-finalizados-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.proyecto-finalizado-card {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.proyecto-finalizado-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.proyecto-finalizado-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.proyecto-finalizado-card:hover .proyecto-finalizado-image img {
+  transform: scale(1.05);
+}
+
+.proyecto-finalizado-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.proyecto-finalizado-card:hover .proyecto-finalizado-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+
+.proyecto-finalizado-nombre {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.3s ease 0.1s;
+}
+
+.proyecto-finalizado-card:hover .proyecto-finalizado-overlay .proyecto-finalizado-nombre {
+  transform: translateY(0);
+}
+
+.proyecto-finalizado-info {
+  color: #fff;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+  text-align: center;
+  opacity: 0.9;
+  transform: translateY(20px);
+  transition: transform 0.3s ease 0.15s;
+}
+
+.proyecto-finalizado-card:hover .proyecto-finalizado-overlay .proyecto-finalizado-info {
+  transform: translateY(0);
+}
+
+.proyecto-finalizado-año {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem 0;
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.3s ease 0.2s;
+}
+
+.proyecto-finalizado-card:hover .proyecto-finalizado-overlay .proyecto-finalizado-año {
+  transform: translateY(0);
+}
+
+.proyecto-finalizado-button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: translateY(20px);
+}
+
+.proyecto-finalizado-card:hover .proyecto-finalizado-overlay .proyecto-finalizado-button {
+  transform: translateY(0);
+}
+
+.proyecto-finalizado-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+@media (max-width: 968px) {
+  .proyectos-finalizados-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .proyectos-finalizados-hero {
+    height: 50vh;
+    min-height: 400px;
+    background-attachment: scroll;
+  }
+
+  .proyectos-finalizados-hero-content .proyectos-finalizados-title {
+    font-size: 2.5rem;
+  }
+
+  .proyectos-finalizados-hero-content .proyectos-finalizados-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .proyectos-finalizados-hero {
+    height: 45vh;
+    min-height: 350px;
+  }
+
+  .proyectos-finalizados-hero-content .proyectos-finalizados-title {
+    font-size: 2rem;
+  }
+
+  .proyectos-finalizados-hero-content .proyectos-finalizados-subtitle {
+    font-size: 1rem;
+  }
+
+  .proyectos-finalizados-page {
+    padding: 3rem 0 4rem;
+  }
+
+  .proyectos-finalizados-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .proyecto-finalizado-card {
+    height: 300px;
+  }
+}
+

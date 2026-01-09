@@ -1,0 +1,74 @@
+.contacto-section {
+  padding: 4rem 0;
+  background: #f8f8f8;
+  border-top: 1px solid #e0e0e0;
+}
+
+.contacto-section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contacto-section-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contacto-section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 1rem 0;
+}
+
+.contacto-section-text {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+}
+
+.contacto-section-button {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contacto-section-button:hover {
+  background: #000;
+  border-color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .contacto-section {
+    padding: 3rem 0;
+  }
+
+  .contacto-section-title {
+    font-size: 2rem;
+  }
+
+  .contacto-section-text {
+    font-size: 1.1rem;
+  }
+
+  .contacto-section-button {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}
+

@@ -1,0 +1,243 @@
+.proyectos-en-ejecucion-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 500px;
+  background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.proyectos-en-ejecucion-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.proyectos-en-ejecucion-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 2rem;
+  max-width: 900px;
+}
+
+.proyectos-en-ejecucion-hero-content .proyectos-en-ejecucion-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 1.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.proyectos-en-ejecucion-hero-content .proyectos-en-ejecucion-subtitle {
+  font-size: 1.3rem;
+  color: #fff;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.proyectos-en-ejecucion-page {
+  padding: 4rem 0 6rem;
+  background: #f8f8f8;
+  min-height: calc(100vh - 200px);
+}
+
+.proyectos-en-ejecucion-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.proyectos-en-ejecucion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.proyecto-ejecucion-card {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.proyecto-ejecucion-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.proyecto-ejecucion-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.proyecto-ejecucion-card:hover .proyecto-ejecucion-image img {
+  transform: scale(1.05);
+}
+
+.proyecto-ejecucion-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.proyecto-ejecucion-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.proyecto-ejecucion-card:hover .proyecto-ejecucion-overlay {
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 1;
+}
+
+.proyecto-ejecucion-nombre {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.3s ease 0.1s;
+}
+
+.proyecto-ejecucion-card:hover .proyecto-ejecucion-overlay .proyecto-ejecucion-nombre {
+  transform: translateY(0);
+}
+
+.proyecto-ejecucion-info {
+  color: #fff;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+  text-align: center;
+  opacity: 0.9;
+  transform: translateY(20px);
+  transition: transform 0.3s ease 0.15s;
+}
+
+.proyecto-ejecucion-card:hover .proyecto-ejecucion-overlay .proyecto-ejecucion-info {
+  transform: translateY(0);
+}
+
+.proyecto-ejecucion-progreso {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  transform: translateY(20px);
+  transition: transform 0.3s ease 0.2s;
+}
+
+.proyecto-ejecucion-card:hover .proyecto-ejecucion-overlay .proyecto-ejecucion-progreso {
+  transform: translateY(0);
+}
+
+.proyecto-ejecucion-progreso span {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.proyecto-ejecucion-button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: translateY(20px);
+}
+
+.proyecto-ejecucion-card:hover .proyecto-ejecucion-overlay .proyecto-ejecucion-button {
+  transform: translateY(0);
+}
+
+.proyecto-ejecucion-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+@media (max-width: 968px) {
+  .proyectos-en-ejecucion-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .proyectos-en-ejecucion-hero {
+    height: 50vh;
+    min-height: 400px;
+    background-attachment: scroll;
+  }
+
+  .proyectos-en-ejecucion-hero-content .proyectos-en-ejecucion-title {
+    font-size: 2.5rem;
+  }
+
+  .proyectos-en-ejecucion-hero-content .proyectos-en-ejecucion-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .proyectos-en-ejecucion-hero {
+    height: 45vh;
+    min-height: 350px;
+  }
+
+  .proyectos-en-ejecucion-hero-content .proyectos-en-ejecucion-title {
+    font-size: 2rem;
+  }
+
+  .proyectos-en-ejecucion-hero-content .proyectos-en-ejecucion-subtitle {
+    font-size: 1rem;
+  }
+
+  .proyectos-en-ejecucion-page {
+    padding: 3rem 0 4rem;
+  }
+
+  .proyecto-ejecucion-card {
+    height: 350px;
+  }
+}
+

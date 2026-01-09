@@ -1,6 +1,6 @@
 .nosotros {
   padding: 6rem 0;
-  background: #f8f8f8;
+  background: #000;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -26,14 +26,14 @@
 .nosotros-title {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #333;
+  color: #fff;
   margin: 0 0 2rem 0;
 }
 
 .nosotros-description {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #555;
+  color: #ddd;
   margin: 0 0 1.5rem 0;
 }
 
