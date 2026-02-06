@@ -11,7 +11,7 @@ const Integrantes = () => {
       nombre: 'Nicolas Echeverria',
       nombreCompleto: 'Nicolas Echeverria',
       rol: 'Arquitecto Principal',
-      foto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
+      foto: 'https://i.pinimg.com/736x/d9/d8/8e/d9d88e3d1f74e2b8ced3df051cecb81d.jpg',
       biografia:
         'Arquitecto con más de 15 años de experiencia en diseño arquitectónico y planificación urbana. Especializado en arquitectura sostenible y diseño contemporáneo.',
       formacion: 'Licenciado en Arquitectura - Universidad Nacional',
@@ -22,7 +22,7 @@ const Integrantes = () => {
       nombre: 'Sebastian Cardozo',
       nombreCompleto: 'Sebastian Cardozo',
       rol: 'Directora de Proyectos',
-      foto: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400',
+      foto: 'https://i.pinimg.com/736x/d9/d8/8e/d9d88e3d1f74e2b8ced3df051cecb81d.jpg',
       biografia:
         'Arquitecta especializada en gestión de proyectos y diseño de interiores. Con amplia experiencia en proyectos residenciales y comerciales de gran escala.',
       formacion: 'Arquitecta - Universidad de Buenos Aires',

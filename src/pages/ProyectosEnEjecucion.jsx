@@ -21,11 +21,16 @@ const ProyectosEnEjecucion = () => {
       renders: [
         'https://www.arquimaster.com.ar/web/wp-content/uploads/2013/12/cc_alrio2.jpg',
         'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
+        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
+        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
+        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
       ],
       fotosConstruccion: [
         'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
         'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
         'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
+        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
+        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
       ],
       descripcion: {
         'Proyecto': 'Arq. Pietro Ezio Zucchet',
@@ -49,10 +54,16 @@ const ProyectosEnEjecucion = () => {
       renders: [
         'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
         'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
+        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
+        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
+        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
       ],
       fotosConstruccion: [
         'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
         'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
+        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
+        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
+        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
       ],
       descripcion: {
         'Proyecto': 'Arq. Pietro Ezio Zucchet',
@@ -120,6 +131,7 @@ const ProyectosEnEjecucion = () => {
         proyecto={selectedProyecto}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
+        tipoProyecto="ejecucion"
       />
     </>
   );

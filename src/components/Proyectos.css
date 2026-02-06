@@ -5,7 +5,7 @@
 }
 
 .proyectos-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -15,102 +15,203 @@
   font-weight: 600;
   color: #333;
   text-align: center;
-  margin: 0 0 4rem 0;
+  margin: 0 0 1rem 0;
 }
 
-.proyectos-grid {
+.proyectos-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin: 0 0 5rem 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Navegación a proyectos */
+.proyectos-navigation {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.proyecto-card {
-  width: 100%;
-  height: 400px;
+.proyectos-nav-card {
   position: relative;
+  aspect-ratio: 3 / 1;
+  width: 100%;
+  border-radius: 12px;
   overflow: hidden;
-  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.proyecto-image {
-  width: 100%;
-  height: 100%;
-  position: relative;
+.proyectos-nav-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
 }
 
-.proyecto-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.proyecto-card:hover .proyecto-image img {
-  transform: scale(1.05);
-}
-
-.proyecto-overlay {
+.proyectos-nav-card-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: all 0.3s ease;
+  z-index: 1;
 }
 
-.proyecto-overlay.active {
-  background: rgba(0, 0, 0, 0.7);
+.proyectos-nav-card-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: grayscale(100%);
+}
+
+.proyectos-nav-card:hover .proyectos-nav-card-background img {
+  transform: scale(1.15);
+  filter: grayscale(70%);
+}
+
+.proyectos-nav-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.6) 100%);
+  transition: background 0.4s ease;
+  z-index: 2;
+}
+
+.proyectos-nav-card:hover .proyectos-nav-card-overlay {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.proyectos-nav-card-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  text-align: left;
+  transition: all 0.4s ease;
+}
+
+.proyectos-nav-card:hover .proyectos-nav-card-content {
+  transform: translateX(5px);
+}
+
+.proyectos-nav-card-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  flex-shrink: 0;
+  transition: all 0.4s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.proyectos-nav-card:hover .proyectos-nav-card-icon {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.15) rotate(5deg);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.proyectos-nav-card-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.proyectos-nav-card-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  color: #fff;
+  transition: all 0.3s ease;
+  letter-spacing: -0.5px;
+  flex: 1;
+}
+
+.proyectos-nav-card:hover .proyectos-nav-card-title {
+  transform: scale(1.05);
+}
+
+.proyectos-nav-card-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 450px;
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+}
+
+.proyectos-nav-card:hover .proyectos-nav-card-description {
   opacity: 1;
 }
 
-.proyecto-nombre {
+.proyectos-nav-card-arrow {
+  font-size: 2rem;
+  font-weight: 300;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s ease;
+  display: inline-block;
   color: #fff;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0 0 1.5rem 0;
-  text-align: center;
-  transform: translateY(20px);
-  transition: transform 0.3s ease 0.1s;
+  margin-left: 1.5rem;
+  flex-shrink: 0;
 }
 
-.proyecto-overlay.active .proyecto-nombre {
-  transform: translateY(0);
+.proyectos-nav-card:hover .proyectos-nav-card-arrow {
+  opacity: 1;
+  transform: translateX(10px);
 }
 
-.proyecto-button {
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transform: translateY(20px);
-  transition: transform 0.3s ease 0.2s, background 0.3s ease, color 0.3s ease;
-}
-
-.proyecto-overlay.active .proyecto-button {
-  transform: translateY(0);
-}
-
-.proyecto-button:hover {
-  background: #fff;
-  color: #000;
-}
-
+/* Responsive */
 @media (max-width: 968px) {
-  .proyectos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+  .proyectos-nav-card-content {
+    padding: 2rem 2.5rem;
+  }
+
+  .proyectos-nav-card-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 1.5rem;
+  }
+
+  .proyectos-nav-card-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .proyectos-nav-card-title {
+    font-size: 1.75rem;
+  }
+
+  .proyectos-nav-card-description {
+    font-size: 0.95rem;
+    max-width: 350px;
+  }
+
+  .proyectos-nav-card-arrow {
+    font-size: 1.75rem;
+    margin-left: 1rem;
   }
 }
 
@@ -121,99 +222,68 @@
 
   .proyectos-title {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
   }
 
-  .proyectos-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .proyectos-subtitle {
+    font-size: 1rem;
+    margin-bottom: 4rem;
   }
 
-  .proyecto-card {
-    height: 300px;
-  }
-}
-
-.proyectos-navigation {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 4rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.proyectos-nav-button {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 2rem;
-  background: #fff;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #333;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.proyectos-nav-button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  border-color: #333;
-}
-
-.proyectos-nav-button-finalizados:hover {
-  border-color: #333;
-}
-
-.proyectos-nav-button-ejecucion:hover {
-  border-color: #333;
-}
-
-.proyectos-nav-icon {
-  font-size: 2.5rem;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.proyectos-nav-content {
-  flex: 1;
-}
-
-.proyectos-nav-content h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem 0;
-  color: #333;
-}
-
-.proyectos-nav-content p {
-  font-size: 0.95rem;
-  color: #666;
-  margin: 0;
-  line-height: 1.5;
-}
-
-@media (max-width: 768px) {
   .proyectos-navigation {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 3rem;
+    gap: 2rem;
   }
 
-  .proyectos-nav-button {
-    padding: 1.5rem;
+  .proyectos-nav-card-content {
     flex-direction: column;
     text-align: center;
+    padding: 2.5rem 2rem;
   }
 
-  .proyectos-nav-icon {
+  .proyectos-nav-card-icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .proyectos-nav-card-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .proyectos-nav-card-title {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
-  .proyectos-nav-content h3 {
-    font-size: 1.2rem;
+  .proyectos-nav-card-description {
+    font-size: 1rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .proyectos-nav-card-arrow {
+    font-size: 2rem;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .proyectos-nav-card-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .proyectos-nav-card-title {
+    font-size: 1.75rem;
+  }
+
+  .proyectos-nav-card-description {
+    font-size: 0.95rem;
+  }
+
+  .proyectos-nav-card-arrow {
+    font-size: 1.75rem;
   }
 }

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import logo from '../assets/Logo.png';
 import './Inicio.css';
 
 const Inicio = () => {
@@ -24,7 +25,7 @@ const Inicio = () => {
       <div className="inicio-overlay"></div>
       <div className="inicio-content">
         <div className="inicio-left">
-          <h1 className="inicio-title">Valto Estudio de Arquitectura</h1>
+          <h1 className="inicio-title">Arquitectura con propósito</h1>
           <p className="inicio-subtitle">
             Diseñamos espacios que transforman la forma en que vivimos y trabajamos
           </p>
@@ -34,7 +35,7 @@ const Inicio = () => {
         </div>
         <div className="inicio-right">
           <div className="inicio-logo-large">
-            <h2>VALTO</h2>
+            <img src={logo} alt="Valto Estudio" className="inicio-logo-img" />
             <p>Estudio de Arquitectura</p>
           </div>
         </div>

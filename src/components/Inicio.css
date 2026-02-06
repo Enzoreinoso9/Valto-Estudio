@@ -89,13 +89,15 @@
   text-align: center;
 }
 
-.inicio-logo-large h2 {
-  font-size: 6rem;
-  font-weight: 300;
-  color: #fff;
-  margin: 0;
-  letter-spacing: 8px;
-  opacity: 0.9;
+.inicio-logo-img {
+  height: 200px;
+  width: auto;
+  max-width: 400px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.95;
+  filter: brightness(0) invert(1);
 }
 
 .inicio-logo-large p {
@@ -131,8 +133,9 @@
     font-size: 2.5rem;
   }
 
-  .inicio-logo-large h2 {
-    font-size: 4rem;
+  .inicio-logo-img {
+    height: 150px;
+    max-width: 300px;
   }
 }
 
@@ -145,8 +148,9 @@
     font-size: 1rem;
   }
 
-  .inicio-logo-large h2 {
-    font-size: 3rem;
+  .inicio-logo-img {
+    height: 120px;
+    max-width: 250px;
   }
 }
 

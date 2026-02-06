@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/Logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -47,11 +48,15 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           {location.pathname === '/' ? (
-            <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')}>
-              Valto Estudio
+            <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="navbar-logo-link">
+              <img src={logo} alt="" className="navbar-logo-img" />
+              <span>Valto Estudio</span>
             </a>
           ) : (
-            <Link to="/">Valto Estudio</Link>
+            <Link to="/" className="navbar-logo-link">
+              <img src={logo} alt="" className="navbar-logo-img" />
+              <span>Valto Estudio</span>
+            </Link>
           )}
         </div>
         

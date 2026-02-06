@@ -5,7 +5,7 @@ const ContactoSection = () => {
   const location = useLocation();
 
   const handleContactClick = () => {
-    // Si estamos en la página principal, hacer scroll suave
+    // Si estamos en la página principal, hacer scroll suave a la sección contacto
     if (location.pathname === '/') {
       setTimeout(() => {
         const element = document.getElementById('contacto');
@@ -29,7 +29,7 @@ const ContactoSection = () => {
               Contactanos
             </button>
           ) : (
-            <Link to="/" className="contacto-section-button" onClick={handleContactClick}>
+            <Link to="/#contacto" className="contacto-section-button">
               Contactanos
             </Link>
           )}

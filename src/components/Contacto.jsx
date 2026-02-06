@@ -98,7 +98,7 @@ const Contacto = () => {
               <div>
                 <strong>Teléfono</strong>
                 <p>
-                  <a href="tel:+541123456789">+54 11 2345-6789</a>
+                  <a href="tel:+541123456789">+54 9 370 480-1011</a>
                 </p>
               </div>
             </div>
@@ -108,7 +108,7 @@ const Contacto = () => {
                 <strong>Redes Sociales</strong>
                 <div className="contacto-social">
                   <a
-                    href="https://instagram.com/valtoestudio"
+                    href="https://www.instagram.com/valto.estudio/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-link"
@@ -116,7 +116,7 @@ const Contacto = () => {
                     Instagram
                   </a>
                   <a
-                    href="https://wa.me/541123456789"
+                    href={`https://wa.me/5493704801011?text=${encodeURIComponent('Hola Valto Estudio, me gustaría consultar sobre sus servicios.')}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-link"

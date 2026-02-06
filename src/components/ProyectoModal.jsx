@@ -1,22 +1,44 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './ProyectoModal.css';
 
-const ProyectoModal = ({ proyecto, isOpen, onClose }) => {
+const TABS_FINALIZADO = [
+  { key: 'terminado', label: 'Proyecto terminado', imagesKey: 'fotosProyectoTerminado' },
+  { key: 'renders', label: 'Renders', imagesKey: 'renders' },
+  { key: 'construccion', label: 'Obra en construcción', imagesKey: 'fotosConstruccion' },
+];
+
+const TABS_EJECUCION = [
+  { key: 'construccion', label: 'Obra en construcción', imagesKey: 'fotosConstruccion' },
+  { key: 'renders', label: 'Renders', imagesKey: 'renders' },
+];
+
+const ProyectoModal = ({ proyecto, isOpen, onClose, tipoProyecto = 'ejecucion' }) => {
+  const tabs = tipoProyecto === 'finalizado' ? TABS_FINALIZADO : TABS_EJECUCION;
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const activeTab = tabs[activeTabIndex];
+  const currentImages = activeTab ? (proyecto?.[activeTab.imagesKey] || []) : [];
+  const hasMultipleTabs = tabs.length > 1;
+
+  useEffect(() => {
+    if (!isOpen || !proyecto) return;
+    setActiveTabIndex(0);
+    setCurrentImageIndex(0);
+  }, [isOpen, proyecto]);
+
+  useEffect(() => {
+    setCurrentImageIndex(0);
+  }, [activeTabIndex]);
 
   if (!isOpen || !proyecto) return null;
 
-  const allImages = [
-    ...(proyecto.renders || []),
-    ...(proyecto.fotosConstruccion || [])
-  ];
-
   const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % allImages.length);
+    setCurrentImageIndex((prev) => (prev + 1) % Math.max(1, currentImages.length));
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + allImages.length) % allImages.length);
+    setCurrentImageIndex((prev) => (prev - 1 + Math.max(1, currentImages.length)) % Math.max(1, currentImages.length));
   };
 
   const goToImage = (index) => {
@@ -27,31 +49,61 @@ const ProyectoModal = ({ proyecto, isOpen, onClose }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}>×</button>
-        
+
         <div className="modal-body">
-          {/* Carrusel de Imágenes */}
           <div className="modal-carousel">
-            {allImages.length > 0 ? (
+            {/* Pestañas de categorías */}
+            {hasMultipleTabs && (
+              <div className="modal-tabs">
+                {tabs.map((tab, index) => {
+                  const images = proyecto[tab.imagesKey] || [];
+                  const hasImages = images.length > 0;
+                  return (
+                    <button
+                      key={tab.key}
+                      type="button"
+                      className={`modal-tab ${index === activeTabIndex ? 'active' : ''} ${!hasImages ? 'empty' : ''}`}
+                      onClick={() => setActiveTabIndex(index)}
+                    >
+                      <span className="modal-tab-label">{tab.label}</span>
+                      {hasImages && (
+                        <span className="modal-tab-count">{images.length}</span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Carrusel de la pestaña activa */}
+            {currentImages.length > 0 ? (
               <>
                 <div className="carousel-main">
-                  <img src={allImages[currentImageIndex]} alt={`${proyecto.nombre} - Imagen ${currentImageIndex + 1}`} />
-                  {allImages.length > 1 && (
+                  <img
+                    src={currentImages[currentImageIndex]}
+                    alt={`${proyecto.nombre} - ${activeTab?.label} ${currentImageIndex + 1}`}
+                  />
+                  {currentImages.length > 1 && (
                     <>
-                      <button className="carousel-btn carousel-btn-prev" onClick={prevImage}>‹</button>
-                      <button className="carousel-btn carousel-btn-next" onClick={nextImage}>›</button>
+                      <button type="button" className="carousel-btn carousel-btn-prev" onClick={prevImage} aria-label="Imagen anterior">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                      </button>
+                      <button type="button" className="carousel-btn carousel-btn-next" onClick={nextImage} aria-label="Siguiente imagen">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                      </button>
                     </>
                   )}
                   <div className="carousel-counter">
-                    {currentImageIndex + 1} / {allImages.length}
+                    {currentImageIndex + 1} / {currentImages.length}
                   </div>
                 </div>
-                {allImages.length > 1 && (
+                {currentImages.length > 1 && (
                   <div className="carousel-thumbnails">
-                    {allImages.map((img, index) => (
+                    {currentImages.map((img, index) => (
                       <img
                         key={index}
                         src={img}
-                        alt={`Thumbnail ${index + 1}`}
+                        alt={`${activeTab?.label} ${index + 1}`}
                         className={index === currentImageIndex ? 'active' : ''}
                         onClick={() => goToImage(index)}
                       />
@@ -61,14 +113,12 @@ const ProyectoModal = ({ proyecto, isOpen, onClose }) => {
               </>
             ) : (
               <div className="carousel-placeholder">
-                <p>No hay imágenes disponibles</p>
+                <p>No hay imágenes en esta categoría</p>
               </div>
             )}
           </div>
 
-          {/* Contenido Scrolleable */}
           <div className="modal-scrollable">
-            {/* Información Básica */}
             <div className="modal-info-section">
               <h2 className="modal-project-name">{proyecto.nombre}</h2>
               <div className="modal-meta">
@@ -80,7 +130,6 @@ const ProyectoModal = ({ proyecto, isOpen, onClose }) => {
               )}
             </div>
 
-            {/* Descripción Detallada */}
             {proyecto.descripcion && (
               <div className="modal-description-section">
                 <h3 className="modal-section-title">Detalles del Proyecto</h3>
@@ -102,4 +151,3 @@ const ProyectoModal = ({ proyecto, isOpen, onClose }) => {
 };
 
 export default ProyectoModal;
-

@@ -1,3 +1,4 @@
+import logo from '../assets/Logo.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -6,11 +7,12 @@ const Footer = () => {
       <div className="footer-line"></div>
       <div className="footer-container">
         <div className="footer-logo">
+          <img src={logo} alt="Valto Estudio" className="footer-logo-img" />
           <h3>Valto Estudio</h3>
         </div>
         <div className="footer-social">
           <a
-            href="https://instagram.com/valtoestudio"
+            href="https://www.instagram.com/valto.estudio/"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-social-link"
