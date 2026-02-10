@@ -5,6 +5,17 @@ import ContactoSection from '../components/ContactoSection';
 import ProyectoModal from '../components/ProyectoModal';
 import './ProyectosEnEjecucion.css';
 
+// Casa San Agustin (en ejecución)
+import casaSanAgustinRender1 from '../assets/projects/ejecucion/Casa-SanAgustin/Renders/render1.webp';
+import casaSanAgustinRender2 from '../assets/projects/ejecucion/Casa-SanAgustin/Renders/render2.webp';
+import casaSanAgustinRender3 from '../assets/projects/ejecucion/Casa-SanAgustin/Renders/render3.webp';
+import casaSanAgustinRender4 from '../assets/projects/ejecucion/Casa-SanAgustin/Renders/render4.webp';
+import casaSanAgustinObra1 from '../assets/projects/ejecucion/Casa-SanAgustin/Obras/obra1.webp';
+import casaSanAgustinObra2 from '../assets/projects/ejecucion/Casa-SanAgustin/Obras/obra2.webp';
+import casaSanAgustinObra3 from '../assets/projects/ejecucion/Casa-SanAgustin/Obras/obra3.webp';
+import casaSanAgustinObra4 from '../assets/projects/ejecucion/Casa-SanAgustin/Obras/obra4.webp';
+import casaSanAgustinObra5 from '../assets/projects/ejecucion/Casa-SanAgustin/Obras/obra5.webp';
+
 const ProyectosEnEjecucion = () => {
   const [selectedProyecto, setSelectedProyecto] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -74,6 +85,33 @@ const ProyectosEnEjecucion = () => {
         'Area': '1800 M2',
         'Ubicación': 'Microcentro, Buenos Aires, Argentina',
         'Estado': 'En construcción - 40% completado',
+      },
+    },
+    {
+      id: 6,
+      nombre: 'Casa San Agustin',
+      imagen: casaSanAgustinRender1,
+      categoria: 'Vivienda',
+      ubicacion: 'San Agustín',
+      progreso: 'En curso',
+      resumen: 'Proyecto de vivienda en desarrollo con diseño contemporáneo.',
+      renders: [
+        casaSanAgustinRender1,
+        casaSanAgustinRender2,
+        casaSanAgustinRender3,
+        casaSanAgustinRender4,
+      ],
+      fotosConstruccion: [
+        casaSanAgustinObra1,
+        casaSanAgustinObra2,
+        casaSanAgustinObra3,
+        casaSanAgustinObra4,
+        casaSanAgustinObra5,
+      ],
+      descripcion: {
+        'Tipología': 'Vivienda',
+        'Ubicación': 'San Agustín, Argentina',
+        'Estado': 'En construcción',
       },
     },
   ];

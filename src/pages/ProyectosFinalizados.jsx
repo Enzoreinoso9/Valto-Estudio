@@ -5,177 +5,295 @@ import ContactoSection from '../components/ContactoSection';
 import ProyectoModal from '../components/ProyectoModal';
 import './ProyectosFinalizados.css';
 
-// Importar imágenes
-import casaNapoleon1 from '../assets/projects/finalizados/Casa napoleon/COCINA 1.jpg';
-import casaNapoleon2 from '../assets/projects/finalizados/Casa napoleon/COCINA 2.jpg';
-import casaNapoleon3 from '../assets/projects/finalizados/Casa napoleon/COCINA 3.jpg';
-import casaNapoleon4 from '../assets/projects/finalizados/Casa napoleon/cocina 4.jpg';
-import casaNapoleon5 from '../assets/projects/finalizados/Casa napoleon/cocina 5.jpg';
+// Casa EP - Cocina
+import casaEpCocina1 from '../assets/projects/finalizados/Casa-EP/Renders/Cocina/render1.webp';
+import casaEpCocina2 from '../assets/projects/finalizados/Casa-EP/Renders/Cocina/render2.webp';
+import casaEpCocina3 from '../assets/projects/finalizados/Casa-EP/Renders/Cocina/render3.webp';
+import casaEpCocina4 from '../assets/projects/finalizados/Casa-EP/Renders/Cocina/render4.webp';
+import casaEpCocina5 from '../assets/projects/finalizados/Casa-EP/Renders/Cocina/render5.webp';
+import casaEpCocinaObra1 from '../assets/projects/finalizados/Casa-EP/Obras/Cocina/obra1.webp';
+import casaEpCocinaObra2 from '../assets/projects/finalizados/Casa-EP/Obras/Cocina/obra2.webp';
+import casaEpCocinaObra3 from '../assets/projects/finalizados/Casa-EP/Obras/Cocina/obra3.webp';
+import casaEpCocinaObra4 from '../assets/projects/finalizados/Casa-EP/Obras/Cocina/obra4.webp';
+import casaEpCocinaTerminado1 from '../assets/projects/finalizados/Casa-EP/Terminados/Cocina/terminado1.webp';
+import casaEpCocinaTerminado2 from '../assets/projects/finalizados/Casa-EP/Terminados/Cocina/terminado2.webp';
+import casaEpCocinaTerminado3 from '../assets/projects/finalizados/Casa-EP/Terminados/Cocina/terminado3.webp';
+// Casa EP - Piscina
+import casaEpPiscinaRender1 from '../assets/projects/finalizados/Casa-EP/Renders/Piscina/render1.webp';
+import casaEpPiscinaRender2 from '../assets/projects/finalizados/Casa-EP/Renders/Piscina/render2.webp';
+import casaEpPiscinaObra1 from '../assets/projects/finalizados/Casa-EP/Obras/Piscina/obra1.webp';
+import casaEpPiscinaObra2 from '../assets/projects/finalizados/Casa-EP/Obras/Piscina/obra2.webp';
+import casaEpPiscinaObra3 from '../assets/projects/finalizados/Casa-EP/Obras/Piscina/obra3.webp';
+import casaEpPiscinaObra4 from '../assets/projects/finalizados/Casa-EP/Obras/Piscina/obra4.webp';
+import casaEpPiscinaObra5 from '../assets/projects/finalizados/Casa-EP/Obras/Piscina/obra5.webp';
+
+// Iglesia Sagrada Familia
+import iglesiaRender1 from '../assets/projects/finalizados/Iglesia/Renders/render1.webp';
+import iglesiaRender2 from '../assets/projects/finalizados/Iglesia/Renders/render2.webp';
+import iglesiaRender3 from '../assets/projects/finalizados/Iglesia/Renders/render3.webp';
+import iglesiaObra1 from '../assets/projects/finalizados/Iglesia/Obras/obra1.webp';
+import iglesiaObra2 from '../assets/projects/finalizados/Iglesia/Obras/obra2.webp';
+import iglesiaObra3 from '../assets/projects/finalizados/Iglesia/Obras/obra3.webp';
+import iglesiaObra4 from '../assets/projects/finalizados/Iglesia/Obras/obra4.webp';
+import iglesiaObra5 from '../assets/projects/finalizados/Iglesia/Obras/obra5.webp';
+import iglesiaObra6 from '../assets/projects/finalizados/Iglesia/Obras/obra6.webp';
+
+// Polideportivo San Martin
+import polideportivoThumb from '../assets/projects/finalizados/Polideportivo-SanMartin/Terminados/finalizado1.webp';
+import polideportivoTerminado1 from '../assets/projects/finalizados/Polideportivo-SanMartin/Terminados/finalizado1.webp';
+import polideportivoTerminado2 from '../assets/projects/finalizados/Polideportivo-SanMartin/Terminados/finalizado2.webp';
+import polideportivoTerminado3 from '../assets/projects/finalizados/Polideportivo-SanMartin/Terminados/finalizado3.webp';
+import polideportivoTerminado4 from '../assets/projects/finalizados/Polideportivo-SanMartin/Terminados/finalizado4.webp';
+import polideportivoTerminado5 from '../assets/projects/finalizados/Polideportivo-SanMartin/Terminados/finalizado5.webp';
+import polideportivoRender1 from '../assets/projects/finalizados/Polideportivo-SanMartin/Renders/render1.webp';
+import polideportivoRender2 from '../assets/projects/finalizados/Polideportivo-SanMartin/Renders/render2.webp';
+import polideportivoRender3 from '../assets/projects/finalizados/Polideportivo-SanMartin/Renders/render3.webp';
+import polideportivoRender4 from '../assets/projects/finalizados/Polideportivo-SanMartin/Renders/render4.webp';
+import polideportivoRender5 from '../assets/projects/finalizados/Polideportivo-SanMartin/Renders/render5.webp';
+import polideportivoObra1 from '../assets/projects/finalizados/Polideportivo-SanMartin/Obras/obra1.webp';
+import polideportivoObra2 from '../assets/projects/finalizados/Polideportivo-SanMartin/Obras/obra2.webp';
+import polideportivoObra3 from '../assets/projects/finalizados/Polideportivo-SanMartin/Obras/obra3.webp';
+
+// Local Maipu
+import localMaipuThumb from '../assets/projects/finalizados/Local-Maipu/Terminados/finalizado1.webp';
+import localMaipuTerminado1 from '../assets/projects/finalizados/Local-Maipu/Terminados/finalizado1.webp';
+import localMaipuTerminado2 from '../assets/projects/finalizados/Local-Maipu/Terminados/finalizado2.webp';
+import localMaipuTerminado3 from '../assets/projects/finalizados/Local-Maipu/Terminados/finalizado3.webp';
+import localMaipuTerminado4 from '../assets/projects/finalizados/Local-Maipu/Terminados/finalizado4.webp';
+import localMaipuRender1 from '../assets/projects/finalizados/Local-Maipu/Renders/render1.webp';
+import localMaipuRender2 from '../assets/projects/finalizados/Local-Maipu/Renders/render2.webp';
+import localMaipuRender3 from '../assets/projects/finalizados/Local-Maipu/Renders/render3.webp';
+import localMaipuRender4 from '../assets/projects/finalizados/Local-Maipu/Renders/render4.webp';
+import localMaipuObra1 from '../assets/projects/finalizados/Local-Maipu/Obras/obra1.webp';
+import localMaipuObra2 from '../assets/projects/finalizados/Local-Maipu/Obras/obra2.webp';
+import localMaipuObra3 from '../assets/projects/finalizados/Local-Maipu/Obras/obra3.webp';
+
+// Oficina Ucpim
+import oficinaUcpimThumb from '../assets/projects/finalizados/Oficina-Ucpim/Terminados/finalizado1.webp';
+import oficinaUcpimTerminado1 from '../assets/projects/finalizados/Oficina-Ucpim/Terminados/finalizado1.webp';
+import oficinaUcpimTerminado2 from '../assets/projects/finalizados/Oficina-Ucpim/Terminados/finalizado2.webp';
+import oficinaUcpimTerminado3 from '../assets/projects/finalizados/Oficina-Ucpim/Terminados/finalizado3.webp';
+import oficinaUcpimTerminado4 from '../assets/projects/finalizados/Oficina-Ucpim/Terminados/finalizado4.webp';
+import oficinaUcpimTerminado5 from '../assets/projects/finalizados/Oficina-Ucpim/Terminados/finalizado5.webp';
+import oficinaUcpimRender1 from '../assets/projects/finalizados/Oficina-Ucpim/Renders/render1.webp';
+import oficinaUcpimRender2 from '../assets/projects/finalizados/Oficina-Ucpim/Renders/render2.webp';
+import oficinaUcpimRender3 from '../assets/projects/finalizados/Oficina-Ucpim/Renders/render3.webp';
+import oficinaUcpimRender4 from '../assets/projects/finalizados/Oficina-Ucpim/Renders/render4.webp';
+import oficinaUcpimRender5 from '../assets/projects/finalizados/Oficina-Ucpim/Renders/render5.webp';
+
+const getFirstImage = (item) => {
+  if (!item) return null;
+  const r = item.renders || [];
+  const t = item.fotosProyectoTerminado || [];
+  const c = item.fotosConstruccion || [];
+  if (r.length) return r[0];
+  if (t.length) return t[0];
+  if (c.length) return c[0];
+  return item.imagen || null;
+};
 
 const ProyectosFinalizados = () => {
   const [selectedProyecto, setSelectedProyecto] = useState(null);
+  const [initialSubProyectoIndex, setInitialSubProyectoIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [cardSubIndex, setCardSubIndex] = useState({});
 
   const proyectosFinalizados = [
     {
       id: 1,
       nombre: 'Casa Moderna',
-      imagen: casaNapoleon1,
+      imagen: casaEpCocina1,
       categoria: 'Vivienda Unifamiliar',
       ubicacion: 'Ciudad de Formosa, Formosa',
       año: '2025',
-      resumen: 'Una vivienda unifamiliar contemporánea que combina líneas limpias con materiales de alta calidad, creando un espacio funcional y estéticamente impactante.',
-      fotosProyectoTerminado: [
-        casaNapoleon1,
-        casaNapoleon2,
-        casaNapoleon3,
-        casaNapoleon4,
-        casaNapoleon5,
-      ].filter(Boolean),
+      subProyectos: [
+        {
+          nombre: 'Cocina & Comedor',
+          resumen: 'Espacio integrado de cocina y comedor con líneas limpias, materiales de calidad y gran luminosidad.',
+          fotosProyectoTerminado: [
+            casaEpCocinaTerminado1,
+            casaEpCocinaTerminado2,
+            casaEpCocinaTerminado3,
+          ],
+          renders: [
+            casaEpCocina1,
+            casaEpCocina2,
+            casaEpCocina3,
+            casaEpCocina4,
+            casaEpCocina5,
+          ],
+          fotosConstruccion: [
+            casaEpCocinaObra1,
+            casaEpCocinaObra2,
+            casaEpCocinaObra3,
+            casaEpCocinaObra4,
+          ],
+          descripcion: {
+            'Proyecto': 'Arq. Pietro Ezio Zucchet',
+            'Ejecución': 'Valto Estudio',
+            'Dirección de la Construcción': 'Valto Estudio',
+            'Diseño y Dimensionado Estructural': 'Ing. Gustavo Fleitas',
+            'Tipología': 'Cocina y Comedor',
+            'Superficie': '95m2',
+            'Ubicación': 'C. Eva Perón & Av. Napoleón Uriburu, Ciudad de Formosa, Formosa, Argentina',
+            'Año de finalización': '2025',
+          },
+        },
+        {
+          nombre: 'Quincho & Piscina',
+          resumen: 'Área de quincho y piscina integrada al jardín, pensada para el disfrute al aire libre.',
+          fotosProyectoTerminado: [],
+          renders: [
+            casaEpPiscinaRender1,
+            casaEpPiscinaRender2,
+          ],
+          fotosConstruccion: [
+            casaEpPiscinaObra1,
+            casaEpPiscinaObra2,
+            casaEpPiscinaObra3,
+            casaEpPiscinaObra4,
+            casaEpPiscinaObra5,
+          ],
+          descripcion: {
+            'Proyecto': 'Arq. Pietro Ezio Zucchet',
+            'Ejecución': 'Valto Estudio',
+            'Tipología': 'Quincho y Piscina',
+            'Area': '460 M2',
+            'Ubicación': 'C. Eva Perón & Av. Napoleón Uriburu, Ciudad de Formosa, Formosa, Argentina',
+            'Año de finalización': '2025',
+          },
+        },
+      ],
+    },
+    {
+      id: 9,
+      nombre: 'Iglesia Sagrada Familia',
+      imagen: iglesiaRender1,
+      categoria: 'Edificación religiosa',
+      ubicacion: 'Formosa',
+      año: '2025',
+      resumen: 'Proyecto de iglesia con espacios de culto y comunidad.',
+      fotosProyectoTerminado: [],
       renders: [
-        casaNapoleon1,
-        casaNapoleon2,
-        casaNapoleon3,
-        casaNapoleon4,
-        casaNapoleon5,
-      ].filter(Boolean),
-      fotosConstruccion: [],
+        iglesiaRender1,
+        iglesiaRender2,
+        iglesiaRender3,
+      ],
+      fotosConstruccion: [
+        iglesiaObra1,
+        iglesiaObra2,
+        iglesiaObra3,
+        iglesiaObra4,
+        iglesiaObra5,
+        iglesiaObra6,
+      ],
       descripcion: {
-        'Proyecto': 'Arq. Pietro Ezio Zucchet',
-        'Ejecución': 'Valto Estudio',
-        'Dirección de la Construcción': 'Valto Estudio',
-        'Diseño y Dimensionado Estructural': 'Ing. Gustavo Fleitas',
-        'Tipología': 'Vivienda unifamiliar',
-        'Diseño y Dimensionado de Climatización': 'Leader Ingenieria',
-        'Area': '460 M2',
-        'Dirección Técnica': 'ezestudio SAS',
-        'Asistencia Técnica en Obra': 'M.M.O. Maximiliano Zandobal',
-        'Estructuras': 'Ing. Graciano Zucchet',
-        'Instalaciones': 'MMO Julio Cesar Ferreira, ING Ramon Ruchinsky',
-        'Gestión de Documentación': 'M.M.O. Victoria Paredez',
-        'Superficie Cubierta': '95m2',
-        'Ubicación': 'C. Eva Perón & Av. Napoleón Uriburu, Ciudad de Formosa, Formosa, Argentina',
+        'Tipología': 'Iglesia',
+        'Ubicación': 'Formosa, Argentina',
         'Año de finalización': '2025',
       },
     },
     {
       id: 2,
-      nombre: 'Edificio Residencial',
-      imagen: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-      categoria: 'Residencial en altura',
-      ubicacion: 'Recoleta, Buenos Aires',
-      año: '2022',
-      resumen: 'Edificio residencial de alta gama ubicado en el corazón de Recoleta, con diseño moderno y acabados de lujo.',
+      nombre: 'Polideportivo San Martin 2',
+      imagen: polideportivoThumb,
+      categoria: 'Polideportivo',
+      ubicacion: 'San Martín',
+      año: '2025',
+      resumen: 'Polideportivo con instalaciones deportivas y espacios de uso comunitario.',
       fotosProyectoTerminado: [
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
+        polideportivoTerminado1,
+        polideportivoTerminado2,
+        polideportivoTerminado3,
+        polideportivoTerminado4,
+        polideportivoTerminado5,
       ],
       renders: [
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
+        polideportivoRender1,
+        polideportivoRender2,
+        polideportivoRender3,
+        polideportivoRender4,
+        polideportivoRender5,
       ],
       fotosConstruccion: [
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
+        polideportivoObra1,
+        polideportivoObra2,
+        polideportivoObra3,
       ],
       descripcion: {
-        'Proyecto': 'Arq. Pietro Ezio Zucchet',
-        'Ejecución': 'ezestudio S.A.S',
-        'Dirección de la Construcción': 'ezestudio S.A.S',
-        'Diseño y Dimensionado Estructural': 'Ing. Gustavo Fleitas',
-        'Tipología': 'Residencial en altura',
-        'Area': '1200 M2',
-        'Ubicación': 'Recoleta, Buenos Aires, Argentina',
-        'Año de finalización': '2022',
+        'Tipología': 'Polideportivo',
+        'Ubicación': 'San Martín, Argentina',
+        'Año de finalización': '2025',
       },
     },
     {
-      id: 4,
-      nombre: 'Casa Minimalista',
-      imagen: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-      categoria: 'Vivienda Unifamiliar',
-      ubicacion: 'Pilar, Buenos Aires',
-      año: '2023',
-      resumen: 'Diseño minimalista que prioriza la simplicidad y la funcionalidad, creando espacios amplios y luminosos.',
+      id: 7,
+      nombre: 'Local Maipu',
+      imagen: localMaipuThumb,
+      categoria: 'Comercial',
+      ubicacion: 'Maipú',
+      año: '2025',
+      resumen: 'Local comercial con diseño funcional y atractivo para el público.',
       fotosProyectoTerminado: [
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
+        localMaipuTerminado1,
+        localMaipuTerminado2,
+        localMaipuTerminado3,
+        localMaipuTerminado4,
       ],
       renders: [
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
+        localMaipuRender1,
+        localMaipuRender2,
+        localMaipuRender3,
+        localMaipuRender4,
       ],
       fotosConstruccion: [
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
+        localMaipuObra1,
+        localMaipuObra2,
+        localMaipuObra3,
       ],
       descripcion: {
-        'Proyecto': 'Arq. Pietro Ezio Zucchet',
-        'Tipología': 'Vivienda unifamiliar',
-        'Area': '350 M2',
-        'Ubicación': 'Pilar, Buenos Aires, Argentina',
-        'Año de finalización': '2023',
+        'Tipología': 'Local Comercial',
+        'Ubicación': 'Maipú, Argentina',
+        'Año de finalización': '2025',
       },
     },
     {
-      id: 6,
-      nombre: 'Villa Contemporánea',
-      imagen: 'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-      categoria: 'Residencial Premium',
-      ubicacion: 'Carmelo, Uruguay',
-      año: '2024',
-      resumen: 'Villa de lujo con diseño contemporáneo, integrada perfectamente con el paisaje natural de Carmelo.',
+      id: 8,
+      nombre: 'Oficina Ucpim',
+      imagen: oficinaUcpimThumb,
+      categoria: 'Oficinas',
+      ubicacion: 'Argentina',
+      año: '2025',
+      resumen: 'Oficina con espacios de trabajo modernos y funcionales.',
       fotosProyectoTerminado: [
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
+        oficinaUcpimTerminado1,
+        oficinaUcpimTerminado2,
+        oficinaUcpimTerminado3,
+        oficinaUcpimTerminado4,
+        oficinaUcpimTerminado5,
       ],
       renders: [
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
+        oficinaUcpimRender1,
+        oficinaUcpimRender2,
+        oficinaUcpimRender3,
+        oficinaUcpimRender4,
+        oficinaUcpimRender5,
       ],
-      fotosConstruccion: [
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
-      ],
+      fotosConstruccion: [],
       descripcion: {
-        'Proyecto': 'Arq. Pietro Ezio Zucchet',
-        'Tipología': 'Residencial Premium',
-        'Area': '680 M2',
-        'Ubicación': 'Carmelo, Uruguay',
-        'Año de finalización': '2024',
+        'Tipología': 'Oficina',
+        'Ubicación': 'Argentina',
+        'Año de finalización': '2025',
       },
     },
   ];
 
+  const getSubIndex = (proyecto) => proyecto.subProyectos ? (cardSubIndex[proyecto.id] ?? 0) : 0;
+  const setSubIndex = (proyectoId, index) => setCardSubIndex((prev) => ({ ...prev, [proyectoId]: index }));
+
   const handleVerProyecto = (proyecto) => {
     setSelectedProyecto(proyecto);
+    setInitialSubProyectoIndex(proyecto.subProyectos ? getSubIndex(proyecto) : 0);
     setIsModalOpen(true);
   };
 
@@ -199,20 +317,46 @@ const ProyectosFinalizados = () => {
       <section className="proyectos-finalizados-page">
         <div className="proyectos-finalizados-container">
           <div className="proyectos-finalizados-grid">
-            {proyectosFinalizados.map((proyecto) => (
-              <div key={proyecto.id} className="proyecto-finalizado-card">
-                <div className="proyecto-finalizado-image">
-                  <img src={proyecto.imagen} alt={proyecto.nombre} />
-                  <div className="proyecto-finalizado-overlay">
-                    <h3 className="proyecto-finalizado-nombre">{proyecto.nombre}</h3>
-                    <p className="proyecto-finalizado-info">{proyecto.categoria}</p>
-                    <p className="proyecto-finalizado-info">{proyecto.ubicacion}</p>
-                    <p className="proyecto-finalizado-año">{proyecto.año}</p>
-                    <button className="proyecto-finalizado-button" onClick={() => handleVerProyecto(proyecto)}>Ver Proyecto</button>
+            {proyectosFinalizados.map((proyecto) => {
+              const hasSub = proyecto.subProyectos?.length > 0;
+              const subIndex = getSubIndex(proyecto);
+              const displaySub = hasSub ? proyecto.subProyectos[subIndex] : null;
+              const previewImage = hasSub && displaySub
+                ? (getFirstImage(displaySub) || proyecto.imagen)
+                : proyecto.imagen;
+              const previewResumen = (hasSub && displaySub?.resumen) ? displaySub.resumen : proyecto.resumen;
+              return (
+                <div key={proyecto.id} className="proyecto-finalizado-card">
+                  <div className="proyecto-finalizado-image">
+                    <img src={previewImage} alt={proyecto.nombre} />
+                    <div className="proyecto-finalizado-overlay">
+                      <h3 className="proyecto-finalizado-nombre">{proyecto.nombre}</h3>
+                      {hasSub && (
+                        <div className="proyecto-finalizado-subtabs" onClick={(e) => e.stopPropagation()}>
+                          {proyecto.subProyectos.map((sub, index) => (
+                            <button
+                              key={sub.nombre}
+                              type="button"
+                              className={`proyecto-finalizado-subtab ${index === subIndex ? 'active' : ''}`}
+                              onClick={() => setSubIndex(proyecto.id, index)}
+                            >
+                              {sub.nombre}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                      <p className="proyecto-finalizado-info">{proyecto.categoria}</p>
+                      <p className="proyecto-finalizado-info">{proyecto.ubicacion}</p>
+                      <p className="proyecto-finalizado-año">{proyecto.año}</p>
+                      {previewResumen && (
+                        <p className="proyecto-finalizado-resumen">{previewResumen}</p>
+                      )}
+                      <button className="proyecto-finalizado-button" onClick={() => handleVerProyecto(proyecto)}>Ver Proyecto</button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -220,6 +364,7 @@ const ProyectosFinalizados = () => {
       <Footer />
       <ProyectoModal
         proyecto={selectedProyecto}
+        initialSubProyectoIndex={initialSubProyectoIndex}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         tipoProyecto="finalizado"

@@ -1,26 +1,46 @@
 import { useState } from 'react';
 import './Contacto.css';
 
+const WEB3FORMS_ACCESS_KEY = 'e3e02803-ce8c-4ae0-a9c7-d06eb92fb15f';
+
 const Contacto = () => {
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
     mensaje: '',
   });
+  const [result, setResult] = useState('');
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+    if (result) setResult('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
-    console.log('Formulario enviado:', formData);
-    alert('¡Mensaje enviado! Nos pondremos en contacto contigo pronto.');
-    setFormData({ nombre: '', email: '', mensaje: '' });
+    setResult('Enviando...');
+    const form = e.target;
+    const data = new FormData(form);
+    data.append('access_key', WEB3FORMS_ACCESS_KEY);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data,
+      });
+      const json = await response.json();
+      if (json.success) {
+        setResult('Mensaje enviado correctamente. Nos pondremos en contacto pronto.');
+        setFormData({ nombre: '', email: '', mensaje: '' });
+      } else {
+        setResult('Hubo un error al enviar. Intentá de nuevo o contactanos por email.');
+      }
+    } catch {
+      setResult('Error de conexión. Intentá de nuevo más tarde.');
+    }
   };
 
   return (
@@ -68,9 +88,14 @@ const Contacto = () => {
                 required
               ></textarea>
             </div>
-            <button type="submit" className="form-submit">
-              Enviar
+            <button type="submit" className="form-submit" disabled={result === 'Enviando...'}>
+              {result === 'Enviando...' ? 'Enviando...' : 'Enviar'}
             </button>
+            {result && result !== 'Enviando...' && (
+              <p className={`form-result ${result.includes('Error') || result.includes('error') ? 'form-result-error' : 'form-result-success'}`}>
+                {result}
+              </p>
+            )}
           </form>
         </div>
 
@@ -89,7 +114,7 @@ const Contacto = () => {
               <div>
                 <strong>Email</strong>
                 <p>
-                  <a href="mailto:info@valtoestudio.com">info@valtoestudio.com</a>
+                  <a href="mailto:valto.estudio.arq@gmail.com">valto.estudio.arq@gmail.com</a>
                 </p>
               </div>
             </div>

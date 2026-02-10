@@ -92,6 +92,31 @@
   background: #555;
 }
 
+.form-submit:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.form-result {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.form-result-success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.form-result-error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
 .contacto-info-section {
   margin-top: 4rem;
 }
