@@ -16,84 +16,24 @@ import casaSanAgustinObra3 from '../assets/projects/ejecucion/Casa-SanAgustin/Ob
 import casaSanAgustinObra4 from '../assets/projects/ejecucion/Casa-SanAgustin/Obras/obra4.webp';
 import casaSanAgustinObra5 from '../assets/projects/ejecucion/Casa-SanAgustin/Obras/obra5.webp';
 
+// Edificio Incone (en ejecución)
+import edificioInconeRender1 from '../assets/projects/ejecucion/Edificio-IC/Renders/render1.webp';
+import edificioInconeObra1 from '../assets/projects/ejecucion/Edificio-IC/Obras/obra1.webp';
+import edificioInconeObra2 from '../assets/projects/ejecucion/Edificio-IC/Obras/obra2.webp';
+import edificioInconeObra3 from '../assets/projects/ejecucion/Edificio-IC/Obras/obra3.webp';
+import edificioInconeObra4 from '../assets/projects/ejecucion/Edificio-IC/Obras/obra4.webp';
+
 const ProyectosEnEjecucion = () => {
   const [selectedProyecto, setSelectedProyecto] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const proyectosEnEjecucion = [
     {
-      id: 3,
-      nombre: 'Centro Comercial',
-      imagen: 'https://www.arquimaster.com.ar/web/wp-content/uploads/2013/12/cc_alrio2.jpg',
-      categoria: 'Comercial',
-      ubicacion: 'Vicente López',
-      progreso: '65%',
-      resumen: 'Centro comercial moderno con múltiples locales comerciales, áreas comunes y estacionamiento, diseñado para maximizar la experiencia del visitante.',
-      renders: [
-        'https://www.arquimaster.com.ar/web/wp-content/uploads/2013/12/cc_alrio2.jpg',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-      ],
-      fotosConstruccion: [
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
-      ],
-      descripcion: {
-        'Proyecto': 'Arq. Pietro Ezio Zucchet',
-        'Ejecución': 'ezestudio S.A.S',
-        'Dirección de la Construcción': 'ezestudio S.A.S',
-        'Diseño y Dimensionado Estructural': 'Ing. Gustavo Fleitas',
-        'Tipología': 'Centro Comercial',
-        'Area': '2500 M2',
-        'Ubicación': 'Vicente López, Buenos Aires, Argentina',
-        'Estado': 'En construcción - 65% completado',
-      },
-    },
-    {
-      id: 5,
-      nombre: 'Oficinas Corporativas',
-      imagen: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
-      categoria: 'Oficinas',
-      ubicacion: 'Microcentro, Buenos Aires',
-      progreso: '40%',
-      resumen: 'Edificio de oficinas corporativas con diseño eficiente, espacios flexibles y tecnología de última generación para el trabajo moderno.',
-      renders: [
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-      ],
-      fotosConstruccion: [
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200',
-        'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200',
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200',
-      ],
-      descripcion: {
-        'Proyecto': 'Arq. Pietro Ezio Zucchet',
-        'Ejecución': 'ezestudio S.A.S',
-        'Dirección de la Construcción': 'ezestudio S.A.S',
-        'Diseño y Dimensionado Estructural': 'Ing. Gustavo Fleitas',
-        'Tipología': 'Oficinas Corporativas',
-        'Area': '1800 M2',
-        'Ubicación': 'Microcentro, Buenos Aires, Argentina',
-        'Estado': 'En construcción - 40% completado',
-      },
-    },
-    {
       id: 6,
-      nombre: 'Casa San Agustin',
+      nombre: 'CASA SAN AGUSTIN',
       imagen: casaSanAgustinRender1,
       categoria: 'Vivienda',
-      ubicacion: 'San Agustín',
-      progreso: 'En curso',
+      ubicacion: 'Ciudad de Formosa, Formosa',
       resumen: 'Proyecto de vivienda en desarrollo con diseño contemporáneo.',
       renders: [
         casaSanAgustinRender1,
@@ -111,6 +51,27 @@ const ProyectosEnEjecucion = () => {
       descripcion: {
         'Tipología': 'Vivienda',
         'Ubicación': 'San Agustín, Argentina',
+        'Estado': 'En construcción',
+      },
+    },
+    {
+      id: 7,
+      nombre: 'EDIFICIO INCONE',
+      imagen: edificioInconeRender1,
+      categoria: 'Edificio',
+      ubicacion: 'Ciudad de Formosa, Formosa',
+      resumen: 'Edificio residencial de 29 unidades diseñado para integrar funcionalidad, calidad constructiva y diseño contemporáneo.',
+      descripcionModal: 'Desarrollo de vivienda colectiva compuesto por planta baja, siete niveles y azotea, con un total de 29 apartamentos. El proyecto articula diseño arquitectónico, eficiencia funcional y calidad constructiva, generando espacios habitacionales modernos y bien resueltos.',
+      renders: [edificioInconeRender1],
+      fotosConstruccion: [
+        edificioInconeObra1,
+        edificioInconeObra2,
+        edificioInconeObra3,
+        edificioInconeObra4,
+      ],
+      descripcion: {
+        'Tipología': 'Edificio',
+        'Ubicación': 'En desarrollo',
         'Estado': 'En construcción',
       },
     },
@@ -152,9 +113,9 @@ const ProyectosEnEjecucion = () => {
                     <h3 className="proyecto-ejecucion-nombre">{proyecto.nombre}</h3>
                     <p className="proyecto-ejecucion-info">{proyecto.categoria}</p>
                     <p className="proyecto-ejecucion-info">{proyecto.ubicacion}</p>
-                    <div className="proyecto-ejecucion-progreso">
-                      <span>Progreso: {proyecto.progreso}</span>
-                    </div>
+                    {proyecto.resumen && (
+                      <p className="proyecto-ejecucion-resumen">{proyecto.resumen}</p>
+                    )}
                     <button className="proyecto-ejecucion-button" onClick={() => handleVerDetalles(proyecto)}>Ver Detalles</button>
                   </div>
                 </div>

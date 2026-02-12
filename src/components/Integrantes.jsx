@@ -21,11 +21,11 @@ const Integrantes = () => {
       id: 2,
       nombre: 'Sebastian Cardozo',
       nombreCompleto: 'Sebastian Cardozo',
-      rol: 'Directora de Proyectos',
+      rol: 'Arquitecto Principal',
       foto: 'https://i.pinimg.com/736x/d9/d8/8e/d9d88e3d1f74e2b8ced3df051cecb81d.jpg',
       biografia:
-        'Arquitecta especializada en gestión de proyectos y diseño de interiores. Con amplia experiencia en proyectos residenciales y comerciales de gran escala.',
-      formacion: 'Arquitecta - Universidad de Buenos Aires',
+        'Arquitecto especializadao en gestión de proyectos y diseño de interiores. Con amplia experiencia en proyectos residenciales y comerciales de gran escala.',
+      formacion: 'Arquitecto - Universidad de Buenos Aires',
       infoAdicional: 'Certificada en BIM y diseño sostenible',
     },
   ];
@@ -44,6 +44,7 @@ const Integrantes = () => {
     <section id="integrantes" className="integrantes">
       <div className="integrantes-container">
         <h2 className="integrantes-title">Nuestro Equipo</h2>
+        <p className="integrantes-subtitle">Los profesionales detrás de cada proyecto.</p>
         <div className="integrantes-grid">
           {integrantes.map((integrante) => (
             <div key={integrante.id} className="integrante-card">

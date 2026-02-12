@@ -84,13 +84,13 @@ const Navbar = () => {
                 onClick={(e) => handleSmoothScroll(e, 'quienes-somos')}
                 className={activeSection === 'quienes-somos' ? 'active' : ''}
               >
-                Quiénes Somos
+                Nuestra Filosofía
               </a>
             ) : (
               <Link to="/" onClick={() => setTimeout(() => {
                 const element = document.getElementById('quienes-somos');
                 if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }, 100)}>Quiénes Somos</Link>
+              }, 100)}>Nuestra Filosofía</Link>
             )}
           </li>
           <li
@@ -130,13 +130,13 @@ const Navbar = () => {
                 onClick={(e) => handleSmoothScroll(e, 'integrantes')}
                 className={activeSection === 'integrantes' ? 'active' : ''}
               >
-                Integrantes
+                Equipo
               </a>
             ) : (
               <Link to="/" onClick={() => setTimeout(() => {
                 const element = document.getElementById('integrantes');
                 if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }, 100)}>Integrantes</Link>
+              }, 100)}>Equipo</Link>
             )}
           </li>
           <li>

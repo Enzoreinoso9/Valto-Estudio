@@ -15,11 +15,26 @@
   margin-bottom: 4rem;
 }
 
+.contacto-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contacto-logo-img {
+  height: 2.75rem;
+  width: auto;
+  object-fit: contain;
+}
+
 .contacto-logo h2 {
   font-size: 2.5rem;
   font-weight: 600;
   color: #333;
-  margin: 0 0 1rem 0;
+  margin: 0.25rem 0 1rem 0;
+  line-height: 1;
 }
 
 .contacto-frase {

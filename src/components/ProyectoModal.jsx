@@ -212,8 +212,8 @@ const ProyectoModal = ({ proyecto, initialSubProyectoIndex = 0, isOpen, onClose,
                   <span className="modal-progress">Progreso: {displayProyecto.progreso || proyecto.progreso}</span>
                 )}
               </div>
-              {(displayProyecto.resumen || proyecto.resumen) && (
-                <p className="modal-resumen">{displayProyecto.resumen || proyecto.resumen}</p>
+              {(displayProyecto.descripcionModal || displayProyecto.resumen || proyecto.descripcionModal || proyecto.resumen) && (
+                <p className="modal-resumen">{displayProyecto.descripcionModal || displayProyecto.resumen || proyecto.descripcionModal || proyecto.resumen}</p>
               )}
             </div>
 

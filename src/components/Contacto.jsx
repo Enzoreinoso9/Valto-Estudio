@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logo2 from '../assets/Logo2.png';
 import './Contacto.css';
 
 const WEB3FORMS_ACCESS_KEY = 'e3e02803-ce8c-4ae0-a9c7-d06eb92fb15f';
@@ -48,6 +49,7 @@ const Contacto = () => {
       <div className="contacto-container">
         <div className="contacto-header">
           <div className="contacto-logo">
+            <img src={logo2} alt="Valto Estudio" className="contacto-logo-img" />
             <h2>Valto Estudio</h2>
           </div>
           <p className="contacto-frase">¿Tenés un proyecto en mente?</p>
@@ -102,13 +104,6 @@ const Contacto = () => {
         <div className="contacto-info-section">
           <h3 className="contacto-info-title">Datos de Contacto</h3>
           <div className="contacto-info-container">
-            <div className="contacto-info-item">
-              <span className="contacto-icon">📍</span>
-              <div>
-                <strong>Dirección</strong>
-                <p>Av. Principal 1234, Buenos Aires, Argentina</p>
-              </div>
-            </div>
             <div className="contacto-info-item">
               <span className="contacto-icon">✉️</span>
               <div>

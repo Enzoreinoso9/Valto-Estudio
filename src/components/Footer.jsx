@@ -20,7 +20,7 @@ const Footer = () => {
             Instagram
           </a>
           <a
-            href="https://wa.me/541123456789"
+            href={`https://wa.me/5493704801011?text=${encodeURIComponent('Hola Valto Estudio, me gustaría consultar sobre sus servicios.')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="footer-social-link"

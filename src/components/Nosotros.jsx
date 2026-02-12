@@ -6,9 +6,9 @@ const Nosotros = () => {
       <div className="nosotros-container">
         <div className="nosotros-content">
           <div className="nosotros-text">
-            <h2 className="nosotros-title">Quiénes Somos</h2>
+            <h2 className="nosotros-title">Nuestra Filosofía</h2>
             <p className="nosotros-description">
-              Valto Estudio de Arquitectura es un equipo de profesionales apasionados por el diseño
+              Valto Estudio es un equipo de profesionales apasionados por el diseño
               arquitectónico y la construcción. Nos especializamos en crear espacios funcionales,
               sostenibles y estéticamente impactantes que responden a las necesidades de nuestros
               clientes.

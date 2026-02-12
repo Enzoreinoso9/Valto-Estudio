@@ -39,7 +39,7 @@ import iglesiaObra5 from '../assets/projects/finalizados/Iglesia/Obras/obra5.web
 import iglesiaObra6 from '../assets/projects/finalizados/Iglesia/Obras/obra6.webp';
 
 // Polideportivo San Martin
-import polideportivoThumb from '../assets/projects/finalizados/Polideportivo-SanMartin/Terminados/finalizado1.webp';
+import polideportivoThumb from '../assets/projects/finalizados/Polideportivo-SanMartin/Renders/render2.webp';
 import polideportivoTerminado1 from '../assets/projects/finalizados/Polideportivo-SanMartin/Terminados/finalizado1.webp';
 import polideportivoTerminado2 from '../assets/projects/finalizados/Polideportivo-SanMartin/Terminados/finalizado2.webp';
 import polideportivoTerminado3 from '../assets/projects/finalizados/Polideportivo-SanMartin/Terminados/finalizado3.webp';
@@ -55,7 +55,7 @@ import polideportivoObra2 from '../assets/projects/finalizados/Polideportivo-San
 import polideportivoObra3 from '../assets/projects/finalizados/Polideportivo-SanMartin/Obras/obra3.webp';
 
 // Local Maipu
-import localMaipuThumb from '../assets/projects/finalizados/Local-Maipu/Terminados/finalizado1.webp';
+import localMaipuThumb from '../assets/projects/finalizados/Local-Maipu/Renders/render2.webp';
 import localMaipuTerminado1 from '../assets/projects/finalizados/Local-Maipu/Terminados/finalizado1.webp';
 import localMaipuTerminado2 from '../assets/projects/finalizados/Local-Maipu/Terminados/finalizado2.webp';
 import localMaipuTerminado3 from '../assets/projects/finalizados/Local-Maipu/Terminados/finalizado3.webp';
@@ -69,7 +69,7 @@ import localMaipuObra2 from '../assets/projects/finalizados/Local-Maipu/Obras/ob
 import localMaipuObra3 from '../assets/projects/finalizados/Local-Maipu/Obras/obra3.webp';
 
 // Oficina Ucpim
-import oficinaUcpimThumb from '../assets/projects/finalizados/Oficina-Ucpim/Terminados/finalizado1.webp';
+import oficinaUcpimThumb from '../assets/projects/finalizados/Oficina-Ucpim/Renders/render1.webp';
 import oficinaUcpimTerminado1 from '../assets/projects/finalizados/Oficina-Ucpim/Terminados/finalizado1.webp';
 import oficinaUcpimTerminado2 from '../assets/projects/finalizados/Oficina-Ucpim/Terminados/finalizado2.webp';
 import oficinaUcpimTerminado3 from '../assets/projects/finalizados/Oficina-Ucpim/Terminados/finalizado3.webp';
@@ -101,7 +101,7 @@ const ProyectosFinalizados = () => {
   const proyectosFinalizados = [
     {
       id: 1,
-      nombre: 'Casa Moderna',
+      nombre: 'CASA EVA PERÓN',
       imagen: casaEpCocina1,
       categoria: 'Vivienda Unifamiliar',
       ubicacion: 'Ciudad de Formosa, Formosa',
@@ -109,7 +109,8 @@ const ProyectosFinalizados = () => {
       subProyectos: [
         {
           nombre: 'Cocina & Comedor',
-          resumen: 'Espacio integrado de cocina y comedor con líneas limpias, materiales de calidad y gran luminosidad.',
+          resumen: 'Cocina moderna integrada al comedor, donde minimalismo y funcionalidad se combinan en un espacio cálido y luminoso.',
+          descripcionModal: 'Proyecto de cocina contemporánea con integración directa al comedor, pensado para el uso cotidiano y la fluidez espacial. Líneas simples, paleta neutra y madera natural generan amplitud visual, orden y equilibrio, logrando un ambiente funcional sin perder calidez.',
           fotosProyectoTerminado: [
             casaEpCocinaTerminado1,
             casaEpCocinaTerminado2,
@@ -141,7 +142,8 @@ const ProyectosFinalizados = () => {
         },
         {
           nombre: 'Quincho & Piscina',
-          resumen: 'Área de quincho y piscina integrada al jardín, pensada para el disfrute al aire libre.',
+          resumen: 'Quincho y piscina diseñados como un espacio de encuentro que integra interior y exterior en una propuesta sobria y funcional.',
+          descripcionModal: 'Proyecto ejecutado en tres meses, donde diseño y funcionalidad convergen en un único espacio social. La paleta sobria y la apertura hacia el exterior refuerzan la conexión con el entorno, mientras que la piscina se convierte en el eje central para el descanso y el disfrute familiar.',
           fotosProyectoTerminado: [],
           renders: [
             casaEpPiscinaRender1,
@@ -167,12 +169,13 @@ const ProyectosFinalizados = () => {
     },
     {
       id: 9,
-      nombre: 'Iglesia Sagrada Familia',
+      nombre: 'IGLESIA SAGRADA FAMILIA',
       imagen: iglesiaRender1,
       categoria: 'Edificación religiosa',
-      ubicacion: 'Formosa',
+      ubicacion: 'Ciudad de Formosa, Formosa',
       año: '2025',
-      resumen: 'Proyecto de iglesia con espacios de culto y comunidad.',
+      resumen: 'Intervención interior con cielorraso suspendido que mejora la acústica, iluminación y estética del espacio religioso.',
+      descripcionModal: 'Proyecto de diseño y ejecución de cielorraso suspendido en PVC y Durlock, orientado a optimizar la acústica, iluminación y orden visual del templo. La intervención busca generar un ambiente más armónico, cálido y funcional para la comunidad, cuidando cada detalle constructivo.',
       fotosProyectoTerminado: [],
       renders: [
         iglesiaRender1,
@@ -195,12 +198,13 @@ const ProyectosFinalizados = () => {
     },
     {
       id: 2,
-      nombre: 'Polideportivo San Martin 2',
+      nombre: 'POLIDEPORTIVO SAN MARTIN 2',
       imagen: polideportivoThumb,
       categoria: 'Polideportivo',
-      ubicacion: 'San Martín',
+      ubicacion: 'San Martín 2, Formosa',
       año: '2025',
-      resumen: 'Polideportivo con instalaciones deportivas y espacios de uso comunitario.',
+      resumen: 'Espacio deportivo contemporáneo diseñado para la comunidad, combinando amplitud, funcionalidad y confort.',
+      descripcionModal: 'Polideportivo concebido como un espacio de encuentro y práctica deportiva, con sectores pensados para garantizar comodidad, seguridad y versatilidad. La iluminación natural y la organización de áreas abiertas favorecen la experiencia del usuario, mientras que el bar y la cocina complementan el conjunto con funcionalidad y coherencia estética.',
       fotosProyectoTerminado: [
         polideportivoTerminado1,
         polideportivoTerminado2,
@@ -228,12 +232,13 @@ const ProyectosFinalizados = () => {
     },
     {
       id: 7,
-      nombre: 'Local Maipu',
+      nombre: 'LOCAL MUNDO VENEZIA',
       imagen: localMaipuThumb,
       categoria: 'Comercial',
-      ubicacion: 'Maipú',
+      ubicacion: 'Ciudad de Formosa, Formosa',
       año: '2025',
-      resumen: 'Local comercial con diseño funcional y atractivo para el público.',
+      resumen: 'Diseño arquitectónico y mobiliario pensados para fortalecer la identidad comercial de Mundo Venezia Cotillón.',
+      descripcionModal: 'Proyecto integral de arquitectura y mobiliario orientado a potenciar la identidad de marca y optimizar la experiencia del cliente. La distribución funcional y el diseño interior trabajan en conjunto para generar un espacio atractivo, ordenado y eficiente.',
       fotosProyectoTerminado: [
         localMaipuTerminado1,
         localMaipuTerminado2,
@@ -259,10 +264,10 @@ const ProyectosFinalizados = () => {
     },
     {
       id: 8,
-      nombre: 'Oficina Ucpim',
+      nombre: 'OFICINA UCPIM',
       imagen: oficinaUcpimThumb,
       categoria: 'Oficinas',
-      ubicacion: 'Argentina',
+      ubicacion: 'Ciudad de Formosa, Formosa',
       año: '2025',
       resumen: 'Oficina con espacios de trabajo modernos y funcionales.',
       fotosProyectoTerminado: [
